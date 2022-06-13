@@ -1,0 +1,31 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>My Friends</h1>
+<br/>
+<div class="table-responsive">
+  <table class="table table-striped table-hover">
+    <thead class="table-dark">
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th colspan="2"></th>
+      </tr>
+    </thead>
+  
+    <tbody class="table-group-divider" >
+      <% @friends.each do |friend| %>
+        <tr>
+          <td><%= friend.first_name %></td>
+          <td><%= friend.last_name %></td>
+          <td><%= friend.email %></td>
+          <td><%= friend.phone %></td>
+          <td><%= link_to "Edit", friend %></td>
+        </tr>
+      <% end %>
+      
+    </tbody>
+  
+  </table>
+</div>
